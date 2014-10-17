@@ -1,0 +1,84 @@
+####################
+### INCLUDE_PATH ###
+####################
+includePath {
+	# cat=Blog: advanced/130/100; type=string; label=CSS Include Path: Path to CSS files.
+	css = EXT:skin_typo360_blogs/Resources/Public/StyleSheets/
+	# cat=Blog: advanced/130/120; type=string; label=JavaScript Include Path: Path to JavaScript files.
+	javascript = EXT:skin_typo360_blogs/Resources/Public/JavaScript/
+}
+
+############
+### PAGE ###
+############
+page {
+	meta {
+		# cat=Blog: basic/160/110; type=string; label=Favicon: Path to favicon file.
+		favicon = EXT:skin_typo360_blogs/Resources/Public/Icons/favicon.ico
+		# cat=Blog: basic/160/110; type=string; label=Author: Enter the page author's name.
+		title = Blog TYPO360
+		# cat=Blog: basic/160/110; type=string; label=Author: Enter the page author's name.
+		author = TYPO360
+		# cat=Blog: basic/160/110; type=string; label=Author: Enter the page author's name.
+		author_mini_description = Blog TYPO360
+		# cat=Blog: basic/160/100; type=string; label=Description: Enter a short description of the page. It will be displayed in the result lists of most search engines.
+		description = Ce blog regroupe de nombreuses astuces TYPO3 pour intégrateurs et développeurs, confirmés ou non.
+		# cat=Blog: basic/160/120; type=string; label=Keywords: Enter keywords for the page separated by commas. You may also use short phrases.
+		keywords = TYPO3
+		# cat=Blog: advanced/160/100; type=string; label=viewport
+		viewport = width=device-width, initial-scale=1.0
+		# cat=Blog: advanced/160/110; type=string; label=robots
+		robots = index,follow,all
+		# cat=Blog: advanced/160/120; type=string; label=apple-mobile-web-app-capable
+		apple-mobile-web-app-capable = no
+		# cat=Blog: advanced/160/130; type=string; label=compatible
+		compatible = IE=edge,chrome=1
+		# cat=Blog: advanced/160/140; type=string; label=google
+		google = notranslate
+	}
+	specialPages {
+		# cat= GC.fr: basic/110/100; type=int; label=Homepage: Homepage of the site.
+		homepage = 1
+		# cat= GC.fr: basic/110/100; type=int; label=Article page(s): Article page(s) of the site.
+		articlePage = 3
+	}
+}
+
+##############
+### SOCIAL ###
+##############
+social {
+	# cat=Blog: basic/170/100; type=string; label=Facebook page
+	facebook = https://www.facebook.com/TYPO360
+	# cat=Blog: basic/170/110; type=string; label=Twitter page
+	twitter = TYPO360
+	# cat=Blog: basic/170/110; type=string; label=Twitter page
+	twitterWidgetId =
+	# cat=Blog: basic/170/120; type=string; label=Linkedin page
+	linkedin = http://fr.linkedin.com/pub/TYPO360/86/70/728
+	# cat=Blog: basic/170/130; type=string; label=Viadeo page
+	skype = TYPO360
+	# cat=Blog: basic/170/150; type=string; label=Steam page
+	steam = TYPO360
+	# cat=Blog: basic/170/160; type=string; label=Email
+	email = typo360@exl-group.com
+}
+
+##############
+### CONFIG ###
+##############
+config {
+	baseURL	= http://www.typo360.com/
+	# cat=Blog: advanced/150/110; type=boolean; label=No Cache
+	no_cache = 0
+	# cat=Blog: advanced/150/120; type=boolean; label=Compress JavaScript
+	compressJs = 1
+	# cat=Blog: advanced/150/130; type=boolean; label=Compress CSS
+	compressCss = 1
+	# cat=Blog: advanced/150/140; type=boolean; label=Concatenate JavaScript
+	concatenateJs = 1
+	# cat=Blog: advanced/150/150; type=boolean; label=Concatenate CSS
+	concatenateCss = 1
+	# cat=Blog: advanced/150/160; type=string; label=Google Analytics identifier
+	idGoogleAnalytics = UA-xxxxxx-x
+}

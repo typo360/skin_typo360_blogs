@@ -1,0 +1,49 @@
+<a class="avatar" href="#">
+	<f:image src="EXT:skin_typo360_blogs/Resources/Public/Images/Frontend/avatar.jpg" class="img-circle" width="128" height="128" />
+</a>
+
+<h3>
+	{tsConf.social.author}
+	<f:if condition="{tsConf.social.author_mini_description}">
+		<br />
+		<small>{tsConf.social.author_mini_description}</small>
+	</f:if>
+</h3>
+
+<hr />
+
+<f:render partial="SocialIcons" arguments="{_all}" />
+
+<hr />
+
+<f:if condition="{tsConf.social.twitterWidgetId}">
+	<div class="twitter-embed">
+		<a class="btn btn-primary" data-toggle="collapse" data-target="#twitter-feed" onclick="setTwitterEmbed(document, 'script', 'twitter-wjs');">
+			<span class="glyphicon glyphicon-globe"></span>
+			<f:translate key="left_menu.twitter_feed_label" />
+		</a>
+		<div id="twitter-feed" class="collapse">
+			<a class="twitter-timeline" href="https://twitter.com/{tsConf.social.twitter}" data-widget-id="{tsConf.social.twitterWidgetId}"><img src="typo3/sysext/t3skin/images/spinner/big-f0f0f0.gif" class="img-thumbnail" alt="{f:translate(key: 'LLL:EXT:lang/locallang_core.xlf:loadingIndicator')}" /></a>
+			<script>
+				var twitterEmbedSet = false;
+				function setTwitterEmbed(d, s, id) {
+					if(twitterEmbedSet)
+						return;
+					twitterEmbedSet = true;
+
+					var js,
+							fjs = d.getElementsByTagName(s)[0],
+							p = /^http:/.test(d.location) ? 'http' : 'https';
+
+					if(!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p+"://platform.twitter.com/widgets.js";
+						fjs.parentNode.insertBefore(js, fjs);
+					}};
+			</script>
+		</div>
+	</div>
+
+	<hr />
+</f:if>

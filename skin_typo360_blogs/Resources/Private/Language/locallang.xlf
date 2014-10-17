@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="fr" datatype="plaintext" original="messages">
+        <header/>
+        <body>
+            <trans-unit id="header.no_javascript">
+                <source>Ce site a été développé pour fonctionner avec JavaScript. Il paraîtrait que vous avez désactivé JavaScript dans votre navigateur, veuillez le réactiver pour une navigation optimale.</source>
+            </trans-unit>
+            <trans-unit id="header.homepage_label">
+                <source>Accueil</source>
+            </trans-unit>
+            <trans-unit id="header.open_menu">
+                <source>Ouvrir le menu</source>
+            </trans-unit>
+
+            <trans-unit id="left_menu.twitter_feed_label">
+                <source>Fil d'actualités Twitter</source>
+            </trans-unit>
+
+            <trans-unit id="footer.powered_by_bootstrap">
+                <source>Thème créé avec l'aide de</source>
+            </trans-unit>
+            <trans-unit id="footer.html5_valid">
+                <source>Valide HTML5 !</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

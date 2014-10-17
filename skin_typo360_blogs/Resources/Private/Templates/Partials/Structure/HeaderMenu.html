@@ -1,0 +1,80 @@
+{namespace b=EXL\SkinTypo360Blogs\ViewHelpers}
+
+<div class="container header-menu">
+	<div class="row">
+		<div class="col-md-9 col-md-offset-3">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+							<span class="sr-only"><f:translate key="header.open_menu" /></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<f:link.page pageUid="{homepage}" class="navbar-brand">
+							<span class="glyphicon glyphicon-home"></span>&nbsp;<f:translate key="header.homepage_label" />
+						</f:link.page>
+					</div>
+
+					<div class="collapse navbar-collapse" id="menu-collapse">
+						<b:headerMenu root="1" as="menuPages">
+							<f:for each="{menuPages}" as="pageDepth1">
+								<ul class="nav navbar-nav">
+									<li class="dropdown {pageDepth1.active}">
+										<f:if condition="{pageDepth1.children}">
+											<f:then>
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+													{pageDepth1.title}
+													<f:if condition="{pageDepth1.children}">
+														<span class="caret"></span>
+													</f:if>
+												</a>
+												<ul class="dropdown-menu" role="menu">
+													<f:for each="{pageDepth1.children}" as="pageDepth2">
+														<li class="{pageDepth2.active}">
+															<f:link.page pageUid="{pageDepth2.uid}">
+																{pageDepth2.title}
+															</f:link.page>
+														</li>
+													</f:for>
+												</ul>
+											</f:then>
+											<f:else>
+												<f:link.page pageUid="{pageDepth1.uid}">
+													{pageDepth1.title}
+												</f:link.page>
+											</f:else>
+										</f:if>
+									</li>
+								</ul>
+							</f:for>
+						</b:headerMenu>
+
+
+						<ul class="nav navbar-nav navbar-right navbar-header-search">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+								<div class="dropdown-menu">
+									<form class="form-inline" role="form">
+
+										<div class="form-group">
+											<div class="input-group">
+												<input class="form-control" placeholder="{f:translate(key: 'LLL:EXT:lang/locallang_core.xlf:tree.searchTermInfo')}">
+												<div class="input-group-addon">
+													<button type="submit" class="btn btn-default">
+														<i class="glyphicon glyphicon-search"></i>
+													</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+</div>

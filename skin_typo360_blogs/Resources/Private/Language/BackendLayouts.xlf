@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="fr" datatype="plaintext" original="extra">
+		<header/>
+		<body>
+			<trans-unit id="1Column" xml:space="preserve">
+				<source>1 colonne</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

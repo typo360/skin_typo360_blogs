@@ -1,0 +1,50 @@
+<ul class="list-inline">
+	<f:if condition="{tsConf.social.facebook}">
+		<li>
+			<f:link.external uri="{tsConf.social.facebook}" target="_blank" class="fa-stack fa-lg">
+				<i class="fa fa-square-o fa-stack-2x"></i>
+				<i class="fa fa-facebook fa-stack-1x"></i>
+			</f:link.external>
+		</li>
+	</f:if>
+	<f:if condition="{tsConf.social.twitter}">
+		<li>
+			<f:link.external uri="{tsConf.social.twitter}" target="_blank" class="fa-stack fa-lg">
+				<i class="fa fa-square-o fa-stack-2x"></i>
+				<i class="fa fa-twitter fa-stack-1x"></i>
+			</f:link.external>
+		</li>
+	</f:if>
+	<f:if condition="{tsConf.social.linkedin}">
+		<li>
+			<f:link.external uri="{tsConf.social.linkedin}" target="_blank" class="fa-stack fa-lg">
+				<i class="fa fa-square-o fa-stack-2x"></i>
+				<i class="fa fa-linkedin fa-stack-1x"></i>
+			</f:link.external>
+		</li>
+	</f:if>
+	<f:if condition="{tsConf.social.skype}">
+		<li>
+			<f:link.external uri="skype:pulule{tsConf.social.skype}?userinfo" target="_blank" class="fa-stack fa-lg">
+				<i class="fa fa-square-o fa-stack-2x"></i>
+				<i class="fa fa-skype fa-stack-1x"></i>
+			</f:link.external>
+		</li>
+	</f:if>
+	<f:if condition="{tsConf.social.steam}">
+		<li>
+			<f:link.external uri="http://steamcommunity.com/id/{tsConf.social.steam}" target="_blank" class="fa-stack fa-lg">
+				<i class="fa fa-square-o fa-stack-2x"></i>
+				<i class="fa fa-steam fa-stack-1x"></i>
+			</f:link.external>
+		</li>
+	</f:if>
+	<f:if condition="{tsConf.social.email}">
+		<li>
+			<f:link.email email="{tsConf.social.email}" class="fa-stack fa-lg">
+				<i class="fa fa-square-o fa-stack-2x"></i>
+				<i class="fa fa-envelope fa-stack-1x"></i>
+			</f:link.email>
+		</li>
+	</f:if>
+</ul>

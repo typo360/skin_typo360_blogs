@@ -1,0 +1,49 @@
+<div class="articles-list">
+	<h2>Derniers articles :</h2>
+
+	<f:for each="{pages}" as="page">
+		<div class="row thumbnail">
+			<div class="col-md-2 text-center caption">
+				<f:link.page pageUid="{page.uid}" class="thumbnail article-image">
+					<f:if condition="{page.media.0}">
+						<f:then><f:image src="{page.media.0.uid}" treatIdAsReference="true" maxWidth="150" maxHeight="150" /></f:then>
+						<f:else><span class="glyphicon glyphicon-hand-right"></span></f:else>
+					</f:if>
+				</f:link.page>
+				<a href="#" class="btn btn-default btn-xs">TYPO3</a>
+				<a href="#" class="btn btn-default btn-xs">PHP</a>
+				<a href="#" class="btn btn-default btn-xs">Cache</a>
+				<a href="#" class="btn btn-default btn-xs">Poulpe</a>
+			</div>
+			<div class="col-md-10">
+				<h2>
+					<f:link.page pageUid="{page.uid}">{page.title}</f:link.page>&nbsp;&#8211;&nbsp;<small><f:format.date format="d/m/Y">{page.crdate}</f:format.date></small>
+				</h2>
+
+				<p><f:cObject typoscriptObjectPath="lib.smallContent" data="{page.uid}" /></p>
+
+				<p class="lead">
+					<f:link.page pageUid="{page.uid}" class="btn btn-default">Lire la suite</f:link.page>
+				</p>
+
+				<hr />
+
+				<p class="text-center">
+					<span class="glyphicon glyphicon-comment"></span>&nbsp;0 commentaire
+				</p>
+			</div>
+		</div>
+	</f:for>
+
+	<div class="row text-center">
+		<ul class="pagination">
+			<li><a href="#">&laquo;</a></li>
+			<li class="active"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+</div>

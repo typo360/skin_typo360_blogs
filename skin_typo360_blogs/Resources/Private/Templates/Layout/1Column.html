@@ -1,0 +1,26 @@
+{namespace b=EXL\SkinTypo360Blogs\ViewHelpers}
+
+<b:getFullTypoScriptConfiguration name="tsConf" configuration="page.meta,social,request" />
+
+<f:render partial="Structure/Header" arguments="{_all}" />
+
+<f:render partial="Structure/HeaderMenu" arguments="{_all}" />
+
+<div class="container">
+	<div class="row">
+
+		<div class="col-md-3 text-center left-menu">
+			<f:render partial="Structure/LeftMenu.html" arguments="{_all}" />
+		</div>
+
+		<!--<div class="col-md-3 col-md-push-12 text-center left-menu">-->
+			<!--test-->
+		<!--</div>-->
+
+		<div class="col-md-9">
+			<f:render section="BodyColumn1" arguments="{_all}" />
+		</div>
+	</div>
+</div>
+
+<f:render partial="Structure/Footer" arguments="{_all}"/>
