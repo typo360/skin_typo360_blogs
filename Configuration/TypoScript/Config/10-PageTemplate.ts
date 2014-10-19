@@ -84,8 +84,6 @@ page {
 		</script>
 	)
 
-#	10 = USER_INT
-#	10.userFunc = \EXL\SkinTypo360Blogs\Test\Test->test
 	10 = FLUIDTEMPLATE
 	10 {
 		file = EXT:skin_typo360_blogs/Resources/Private/Templates/Templates/Default.html
@@ -93,7 +91,17 @@ page {
 
 #		template = \EXL\SkinTypo360Blogs\Test\Test
 
-		partialRootPath = EXT:skin_typo360_blogs/Resources/Private/Templates/Partials
+
+		partialRootPath {
+			10 = skin_romaincanon
+			10.wrap = EXT:|/Resources/Private/Templates/Partials
+
+			20 = skin_typo360_blogs
+			20.wrap = EXT:|/Resources/Private/Templates/Partials
+		}
+#		partialRootPath = EXT:skin_typo360_blogs/Resources/Private/Templates/Partials
+
+
 		layoutRootPath = EXT:skin_typo360_blogs/Resources/Private/Templates/Layout
 
 		extbase.controllerExtensionName = skin_typo360_blogs
@@ -113,6 +121,7 @@ page {
 		}
 	}
 }
+
 
 [PIDupinRootline = {$page.specialPages.articlePage}]
 	page.10.file = EXT:skin_typo360_blogs/Resources/Private/Templates/Templates/Article.html
