@@ -59,7 +59,6 @@ class StandaloneView extends \TYPO3\CMS\Fluid\View\StandaloneView {
 
 		foreach ($possiblePartialPaths as $partialPathAndFilename) {
 			if (is_file($partialPathAndFilename)) {
-				DebuggerUtility::var_dump($partialPathAndFilename, '$partialPathAndFilename');
 				return $partialPathAndFilename;
 			}
 		}
