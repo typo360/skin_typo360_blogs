@@ -1,8 +1,8 @@
 header {
 	height: 340px;
-	background: url(../Images/Frontend/header-background.jpg) no-repeat fixed;
+	background: no-repeat fixed;
 	background-position: center 0px;
-	/*background-size: contain;*/
+	background-size: 100% auto;
 }
 
 @media (max-width: 768px) {
