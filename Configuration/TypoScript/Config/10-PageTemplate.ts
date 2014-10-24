@@ -102,7 +102,10 @@ page {
 #		partialRootPath = EXT:skin_typo360_blogs/Resources/Private/Templates/Partials
 
 
-		layoutRootPath = EXT:skin_typo360_blogs/Resources/Private/Templates/Layout
+		layoutRootPath {
+			10 = EXT:skin_romaincanon/Resources/Private/Templates/Layout
+			20 = EXT:skin_typo360_blogs/Resources/Private/Templates/Layout
+		}
 
 		extbase.controllerExtensionName = skin_typo360_blogs
 

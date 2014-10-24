@@ -35,6 +35,50 @@ class StandaloneView extends \TYPO3\CMS\Fluid\View\StandaloneView {
 	protected $partialRootPaths = NULL;
 
 	/**
+	 * Path(s) to the layout root. If NULL, then $this->partialLayoutPathPattern will be used.
+	 *
+	 * @var array
+	 */
+	protected $layoutRootPaths = NULL;
+
+	/**
+	 * Resolve the path and file name of the layout file, based on
+	 * $this->getLayoutRootPath() and request format
+	 *
+	 * In case a layout has already been set with setLayoutPathAndFilename(),
+	 * this method returns that path, otherwise a path and filename will be
+	 * resolved using the layoutPathAndFilenamePattern.
+	 *
+	 * @param string $layoutName Name of the layout to use. If none given, use "Default
+	 * @return string Path and filename of layout files
+	 * @throws \TYPO3\CMS\Fluid\View\Exception\InvalidTemplateResourceException
+	 */
+	protected function getLayoutPathAndFilename($layoutName = 'Default') {
+		$layoutRootPaths = $this->getLayoutRootPath();
+
+		if (!is_array($layoutRootPaths)) {
+			$layoutRootPaths = array($layoutRootPaths);
+		}
+
+		$possibleLayoutPaths = array();
+		foreach($layoutRootPaths as $layoutRootPath) {
+			if (!is_dir($layoutRootPath)) {
+				throw new \TYPO3\CMS\Fluid\View\Exception\InvalidTemplateResourceException('Layout root path "' . $layoutRootPath . '" does not exist.', 1288092521);
+			}
+			$possibleLayoutPaths[] = \TYPO3\CMS\Core\Utility\GeneralUtility::fixWindowsFilePath($layoutRootPath . '/' . $layoutName . '.' . $this->getRequest()->getFormat());
+			$possibleLayoutPaths[] = \TYPO3\CMS\Core\Utility\GeneralUtility::fixWindowsFilePath($layoutRootPath . '/' . $layoutName);
+		}
+
+		foreach ($possibleLayoutPaths as $layoutPathAndFilename) {
+			if (is_file($layoutPathAndFilename)) {
+				return $layoutPathAndFilename;
+			}
+		}
+
+		throw new \TYPO3\CMS\Fluid\View\Exception\InvalidTemplateResourceException('Could not load layout file. Tried following paths: "' . implode('", "', $possibleLayoutPaths) . '".', 1288092555);
+	}
+
+	/**
 	 * Resolve the partial path and filename based on $this->getPartialRootPath() and request format
 	 *
 	 * @param string $partialName The name of the partial

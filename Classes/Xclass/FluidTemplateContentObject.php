@@ -28,6 +28,42 @@ namespace EXL\SkinTypo360Blogs\Xclass;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class FluidTemplateContentObject extends \TYPO3\CMS\Frontend\ContentObject\FluidTemplateContentObject {
+	
+	/**
+	 * Set layout root path if given in configuration
+	 *
+	 * @param array $conf Configuration array
+	 * @return void
+	 */
+	protected function setLayoutRootPath(array $conf) {
+		if (!isset($conf['layoutRootPath.']) || isset($conf['layoutRootPath.']['wrap'])) {
+			$layoutRootPath = isset($conf['layoutRootPath.']) ? $this->cObj->stdWrap($conf['layoutRootPath'], $conf['layoutRootPath.']) : $conf['layoutRootPath'];
+			if ($layoutRootPath) {
+				$absLayoutRootPath = GeneralUtility::getFileAbsFileName($layoutRootPath);
+				if ($absLayoutRootPath == '') $absLayoutRootPath = $layoutRootPath;
+				$this->view->setLayoutRootPath($absLayoutRootPath);
+			}
+		}
+		else {
+			/** @var  $typoScriptService \TYPO3\CMS\Extbase\Service\TypoScriptService */
+			$typoScriptService = GeneralUtility::makeInstance('\\TYPO3\\CMS\\Extbase\\Service\\TypoScriptService');
+
+			$plainConf = $typoScriptService->convertTypoScriptArrayToPlainArray($conf);
+
+			$layoutRootPaths = array();
+			foreach(array_keys($plainConf['layoutRootPath']) as $key) {
+				$layoutRootPath = isset($conf['layoutRootPath.'][$key . '.']) ? $this->cObj->stdWrap($conf['layoutRootPath.'][$key], $conf['layoutRootPath.'][$key . '.']) : $conf['layoutRootPath.'][$key];
+
+				if ($layoutRootPath) {
+					$absLayoutRootPath = GeneralUtility::getFileAbsFileName($layoutRootPath);
+					if ($absLayoutRootPath == '') $absLayoutRootPath = $layoutRootPath;
+					$layoutRootPaths[] = $absLayoutRootPath;
+				}
+			}
+
+			$this->view->setLayoutRootPath($layoutRootPaths);
+		}
+	}
 
 	/**
 	 * Set partial root path if given in configuration
