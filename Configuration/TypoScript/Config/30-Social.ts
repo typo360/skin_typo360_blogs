@@ -7,6 +7,8 @@ social {
 	twitterWidgetId	    = {$social.twitterWidgetId}
 	linkedin		    = {$social.linkedin}
 	skype			    = {$social.skype}
+	googleplus			= {$social.googleplus}
+	viadeo			    = {$social.viadeo}
 	steam			    = {$social.steam}
 	email			    = {$social.email}
 }
