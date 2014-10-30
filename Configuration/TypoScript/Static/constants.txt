@@ -66,6 +66,8 @@ social {
 	steam = TYPO360
 	# cat=Blog: basic/170/180; type=string; label=Email
 	email = typo360@exl-group.com
+	# cat=Blog: advanced/170/190; type=string; label=Disqus Shortname
+	disqusShortname = typo360
 }
 
 ##############

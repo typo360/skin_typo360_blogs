@@ -11,4 +11,6 @@ social {
 	viadeo			    = {$social.viadeo}
 	steam			    = {$social.steam}
 	email			    = {$social.email}
+	
+	disqusShortname     = {$social.disqusShortname}
 }
