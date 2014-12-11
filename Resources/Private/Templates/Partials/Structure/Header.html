@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {namespace pu=EXL\ExlPagesUtilities\ViewHelpers}
 
 <header>
@@ -13,3 +14,11 @@
 		<f:link.page pageUid="{homepage}" class="header-background" style="background-image:url({f:if(condition: '{banner.0}', then: '{f:uri.image(src: \'{banner.0}\', treatIdAsReference: \'1\')}', else: 'fileadmin/user_upload/blog_general/404.png')})">&nbsp;</f:link.page>
 	</f:alias>
 </header>
+=======
+<noscript>
+	<div class="alert alert-danger noscript-alert" role="alert">
+		<span class="glyphicon glyphicon-warning-sign"></span>&nbsp;<f:translate key="header.no_javascript" />
+	</div>
+</noscript>
+<header style="background-image:url({f:cObject(typoscriptObjectPath: 'lib.banner')})"><f:link.page pageUid="{homepage}">&nbsp;</f:link.page></header>
+>>>>>>> 0da37c67f2a50a8196bc019e9a0c501f74d313bc

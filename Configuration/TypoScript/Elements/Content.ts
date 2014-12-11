@@ -33,8 +33,8 @@ lib.smallContent {
 	select {
 		pidInList.current = 1
 		orderBy = sorting
-		max = 1
+		max = 3
 	}
-	stdWrap.crop = 500 | &#8230; | 1
+	#stdWrap.crop = 500 | &#8230; | 1
 	stdWrap.stripHtml = 1
 }
