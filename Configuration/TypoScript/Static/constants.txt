@@ -40,7 +40,9 @@ page {
 		# cat= GC.fr: basic/110/100; type=int; label=Homepage: Homepage of the site.
 		homepage = 1
 		# cat= GC.fr: basic/110/100; type=int; label=Article page(s): Article page(s) of the site.
-		articlePage = 3
+		articlePage = 17
+		# cat= GC.fr: basic/110/100; type=int; label=Article page(s): Author's presentation page of the site.
+		authorPresentationPage = 6
 	}
 }
 
@@ -52,6 +54,8 @@ social {
 	facebook = https://www.facebook.com/TYPO360
 	# cat=Blog: basic/170/110; type=string; label=Twitter page
 	twitter = TYPO360
+	# cat=Blog: basic/170/110; type=string; label=Google Plus page
+	googleplus = https://plus.google.com/u/0/+TYPO360
 	# cat=Blog: basic/170/110; type=string; label=Twitter page
 	twitterWidgetId =
 	# cat=Blog: basic/170/120; type=string; label=Linkedin page
@@ -62,6 +66,8 @@ social {
 	steam = TYPO360
 	# cat=Blog: basic/170/160; type=string; label=Email
 	email = typo360@exl-group.com
+	# cat=Blog: basic/170/160; type=string; label=Disqus account
+	disqus = blogromaincanon
 }
 
 ##############

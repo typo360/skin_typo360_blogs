@@ -1,6 +1,6 @@
 {namespace b=EXL\SkinTypo360Blogs\ViewHelpers}
 
-<b:getFullTypoScriptConfiguration name="tsConf" configuration="page.meta,social,request" />
+<b:getFullTypoScriptConfiguration name="tsConf" configuration="page.meta,page.specialPages,social,request" />
 
 <f:render partial="Structure/Header" arguments="{_all}" />
 
@@ -23,4 +23,4 @@
 	</div>
 </div>
 
-<f:render partial="Structure/Footer" arguments="{_all}"/>
+<f:render partial="Structure/Footer" arguments="{_all}" />

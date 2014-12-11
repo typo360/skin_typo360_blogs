@@ -17,7 +17,7 @@ config {
 	sys_language_overlay = hideNonTranslated
 	sys_language_uid = 0
 	language = fr
-	locale_all = fr_FR
+	locale_all = fr_FR.utf8
 	htmlTag_langKey = fr
 	htmlTag_dir = ltr
 

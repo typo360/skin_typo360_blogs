@@ -6,6 +6,12 @@
             <trans-unit id="header.no_javascript">
                 <source>Ce site a été développé pour fonctionner avec JavaScript. Il paraîtrait que vous avez désactivé JavaScript dans votre navigateur, veuillez le réactiver pour une navigation optimale.</source>
             </trans-unit>
+	        <trans-unit id="header.cookie_alert">
+		        <source><![CDATA[Conformément à la CNIL, je me dois de t'avertir que ce site utilise des cookies dans le but de te fournir une navigation agréable et stable.<br /><u>En continuant la navigation sur ce site, je considère que tu as compris le message et accepte de bon cœur l'utilisation des cookies</u>.<br />Bon surf !]]></source>
+	        </trans-unit>
+	        <trans-unit id="header.cookie_alert_ok">
+		        <source>Ok, j'ai compris</source>
+	        </trans-unit>
             <trans-unit id="header.homepage_label">
                 <source>Accueil</source>
             </trans-unit>
@@ -13,16 +19,37 @@
                 <source>Ouvrir le menu</source>
             </trans-unit>
 
+            <trans-unit id="avatar.hint">
+                <source>Tu veux en savoir plus sur moi ? Clique !</source>
+            </trans-unit>
+
             <trans-unit id="left_menu.twitter_feed_label">
                 <source>Fil d'actualités Twitter</source>
             </trans-unit>
 
-            <trans-unit id="footer.powered_by_bootstrap">
-                <source>Thème créé avec l'aide de</source>
+            <trans-unit id="footer.blog_of">
+                <source>Blog de %s</source>
             </trans-unit>
-            <trans-unit id="footer.html5_valid">
-                <source>Valide HTML5 !</source>
-            </trans-unit>
+	        <trans-unit id="footer.html5_valid">
+		        <source>Valide HTML5 !</source>
+	        </trans-unit>
+
+	        <trans-unit id="pages.doktype.article">
+		        <source>Article</source>
+	        </trans-unit>
+	        <trans-unit id="pages.doktype.ticket">
+		        <source>Ticket</source>
+	        </trans-unit>
+	        <trans-unit id="pages.doktype.snippet">
+		        <source>Snippet</source>
+	        </trans-unit>
+
+	        <trans-unit id="pages.medias.custom_roles.banner">
+		        <source>Bannière</source>
+	        </trans-unit>
+	        <trans-unit id="pages.medias.custom_roles.article_thumbnail">
+		        <source>Vignette d'article</source>
+	        </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,3 +1,9 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:skin_typo360_blogs/Configuration/TypoScript/Config/" extensions="ts">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:skin_typo360_blogs/Configuration/TypoScript/Extensions/" extensions="ts">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:skin_typo360_blogs/Configuration/TypoScript/Elements/" extensions="ts">
+
+page {
+	specialPages {
+		authorPresentationPage = {$page.specialPages.authorPresentationPage}
+	}
+}

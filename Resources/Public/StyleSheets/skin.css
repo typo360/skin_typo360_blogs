@@ -1,25 +1,149 @@
-header {
+/***********
+ * GENERAL *
+ ***********/
+body {
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a {
+	color: #333333;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	text-align: justify;
+
+}
+p:first-letter {
+	font-size: 1.1em;
+	margin-left: 8px;
+}
+
+ul li {
+	margin-bottom: 5px;
+}
+
+/*********
+ * LINKS *
+ *********/
+a {
+	color: #5B91C0;
+}
+a:hover {
+	text-decoration: none;
+	color: #56AAC3;
+}
+
+a.external:hover, a.external-link-new-window:hover {
+	border-bottom: 1px dotted #56AAC3;
+}
+
+a.external, a.external-link-new-window {
+	white-space: nowrap;
+}
+a.external::before, a.external-link-new-window::before {
+	content: "\e095";
+	font-family: 'Glyphicons Halflings';
+	-webkit-font-smoothing: antialiased;
+	padding-right: 1px;
+	display: inline-block;
+	font-size: 0.8em;
+	opacity: 0.3;
+}
+a.external:hover::before, a.external-link-new-window:hover::before {
+	text-decoration: none;
+	opacity: 1;
+}
+
+/**********
+ * HEADER *
+ **********/
+header a.header-background {
+	width: 100%;
 	height: 340px;
-	background: url(../Images/Frontend/header-background.jpg) no-repeat fixed;
+	display: block;
 	background-position: center 0px;
-	/*background-size: contain;*/
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {
 	header {
 		background-position: 50% -80px;
+	}
+	header a.header-background {
 		height: 240px;
 	}
 }
 
-header a {
-	width: 100%;
-	height: 100%;
-	display: block;
+/**********
+ * FOOTER *
+ **********/
+footer {
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid #EEE;
+}
+
+@media (max-width: 991px) {
+	footer {
+		text-align: center;
+	}
+}
+
+footer h3 {
+	margin-top: 0;
+}
+
+footer .presentation .avatar {
+	float: left;
+}
+
+footer .avatar:hover img {
+	width: 72px;
+	height: 72px;
+	margin-top: -4px;
+	margin-left: -4px;
+	margin-right: -4px;
+}
+
+footer .presentation .social-icons {
+	padding-top: 13px;
+}
+
+footer .html5-valid:hover img {
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+}
+
+/***************
+ * HEADER MENU *
+ ***************/
+@media (max-width: 767px) {
+	.header-menu .row ul.navbar-nav:not(:first-child) > li > a {
+		border-top: 1px solid #ADADAD;
+	}
+}
+@media (min-width: 768px) {
+	.header-menu .row ul.navbar-nav > li > a:hover,
+	.header-menu .row .navbar-header a.navbar-brand:hover {
+		border-bottom: 4px solid #ADADAD;
+		padding-bottom: 11px;
+	}
 }
 
 .header-menu .row > div {
 	padding: 0;
+}
+
+.header-menu nav ul li {
+	margin-bottom: 0;
 }
 
 .header-menu nav.navbar-default {
@@ -43,33 +167,14 @@ header a {
 	border: 0;
 }
 
-p {
-	text-align: justify;
-}
-p:first-letter {
-	font-size: 1.2em;
-	margin-left: 8px;
-}
-
-a.external, a.external-link-new-window {
-	white-space: nowrap;
-}
-a.external::before, a.external-link-new-window::before {
-	content: "\e095";
-	font-family: 'Glyphicons Halflings';
-	-webkit-font-smoothing: antialiased;
-	padding-right: 1px;
-	display:inline-block;
-}
-a.external:hover::before, a.external-link-new-window:hover::before {
-	text-decoration: none;
-}
-
+/*************
+ * LEFT MENU *
+ *************/
 .left-menu {
 	margin-top: -114px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
 	.left-menu {
 		margin-top: 0;
 	}
@@ -78,27 +183,46 @@ a.external:hover::before, a.external-link-new-window:hover::before {
 .left-menu .avatar img {
 	border: 5px solid white;
 }
-
-.articles-list .row.thumbnail:hover {
-	background: #EEE;
-}
-.articles-list .article-image {
-	font-size: 3em;
-}
-.articles-list .article-image .glyphicon {
-	line-height: inherit;
+.left-menu .avatar:hover img {
+	width: 136px;
+	height: 136px;
+	margin-top: -4px;
+	margin-bottom: -4px;
 }
 
-.thumbnail {
-	background-color: inherit;
-}
-
+/*****************
+ * TWITTER EMBED *
+ *****************/
 .twitter-embed {
 	padding-bottom: 15px;
 }
 
+.twitter-embed i {
+	width: 20px;
+	position: inherit;
+	color: #55ACEE;
+}
+
+.twitter-embed .btn.collapsed i {
+	color: #CCCCCC;
+}
+
 .twitter-embed a.btn {
 	width: 100%;
+	font-weight: bold;
+	position: relative;
+}
+
+.twitter-embed .btn .glyphicon.glyphicon-resize-small {
+	color: #CCC;
+	right: 10px;
+	position: absolute;
+	top: 14px;
+	font-size: 1.2em;
+}
+
+.twitter-embed .btn.collapsed .glyphicon.glyphicon-resize-small {
+	display: none;
 }
 
 #twitter-feed {
@@ -112,28 +236,26 @@ a.external:hover::before, a.external-link-new-window:hover::before {
 	max-width: inherit!important;
 }
 
-.noscript-alert {
-	margin-bottom: 0;
-	text-align: center;
-	font-size: 1.5em;
-	border-radius: 0;
-}
-
-footer {
-	padding-top: 10px;
-	border-top: 1px solid #EEE;
-}
-
-footer h3 {
-	margin-top: 0;
-}
-
+/***********
+ * FRIENDS *
+ ***********/
 .friends .thumbnail {
 	margin-bottom: 0;
 }
 
 .friends h4 {
 	margin: 0 4px;
+}
+
+.friends a:hover img.desaturate {
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+	width: 38px;
+	height: 38px;
+	margin: -4px 5px -4px -4px;
+	z-index: 256;
+	position: relative;
 }
 
 @media (min-width: 992px) {
@@ -148,9 +270,152 @@ footer h3 {
 		margin: 5px 0;
 	}
 }
+/****************
+ * SOCIAL ICONS *
+ ****************/
+.fa-stack-1x {
+	font-size: 1.45em;
+}
+
+a.fa-stack {
+	color: #DDD;
+}
+a.fa-stack:hover {
+	color: #C5C5C5;
+}
+
+a.fa-stack {
+	color: #CCC;
+}
+a.fa-stack:hover {
+	color: #C5C5C5;
+}
+a.fa-stack .fa-facebook:hover {
+	color: #3C599B;
+}
+a.fa-stack .fa-twitter:hover {
+	color: #55ACEE;
+}
+a.fa-stack .fa-linkedin:hover {
+	color: #006699;
+}
+a.fa-stack .fa-skype:hover {
+	color: #00A9EC;
+}
+a.fa-stack .fa-google-plus:hover {
+	color: #DA4835;
+}
+a.fa-stack .fa-users:hover {
+	color: #F4982B;
+}
+a.fa-stack .fa-steam:hover {
+	color: #B6B5B2;
+}
+a.fa-stack .fa-envelope:hover {
+	color: #FDDB9A;
+}
+
+/*****************
+ * ARTICLES LIST *
+ *****************/
+.articles-list .row.thumbnail:hover {
+	background: #EEE;
+}
+@media (min-width: 992px) {
+	.articles-list .col-md-2 {
+		border-right: 1px solid rgb(221, 221, 221);
+	}
+}
+.articles-list .article-image {
+	font-size: 3em;
+}
+.articles-list .article-image img {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.articles-list h2 a {
+	display: block;
+}
+.articles-list h2 small {
+	padding-left: 40px;
+}
+.articles-list h2 small:hover {
+	cursor: help;
+}
+.articles-list .article-image .glyphicon {
+	line-height: inherit;
+}
+.articles-list .read-full {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.articles-list .page-type {
+	position: absolute;
+	right: 0;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-bottom-left-radius: 4px;
+	padding: 5px;
+	margin-top: -4px;
+	line-height: 0;
+	z-index: 128;
+}
+
+.articles-list .page-type:hover img {
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+}
+
+/****************
+ * COOKIE ALERT *
+ ****************/
+.cookie-alert .alert {
+	margin: 0;
+	padding: 10px 0 0 0;
+	border: none;
+	font-size: 1.2em;
+	text-align: center;
+	border-radius: 0;
+}
+
+@media (min-width: 768px) {
+	.cookie-alert .cookie-monster-container {
+		position: absolute;
+	}
+}
+.cookie-alert .cookie-monster-container {
+	width: 100%;
+}
+
+.cookie-alert .cookie-monster {
+	background: url('/typo3conf/ext/skin_typo360_blogs/Resources/Public/Images/Frontend/cookie-monster.png') right bottom no-repeat;
+	padding-bottom: 10px;
+	padding-right: 100px;
+	padding-left: 15px;
+}
+.cookie-alert .cookie-monster a.btn {
+	margin-top: 10px;
+}
+
+/*****************
+ * MISCELLANEOUS *
+ *****************/
+.thumbnail {
+	background-color: inherit;
+}
+
+/* Alert which appears when user has disabled JavaScript on his browser. */
+.noscript-alert {
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 1.5em;
+	border-radius: 0;
+}
 
 img.desaturate {
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
-	filter: grayscale(100%);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
 }

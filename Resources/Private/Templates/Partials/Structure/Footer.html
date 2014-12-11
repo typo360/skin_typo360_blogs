@@ -1,51 +1,38 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 text-center">
-				<h3><small>Les copains&nbsp;<span class="glyphicon glyphicon-hand-down"></span></small></h3>
-			</div>
-		</div>
-		<div class="row friends thumbnail text-center">
-			<div class="col-md-4">
-				<f:link.external uri="http://cyril-wolfangel.com/" target="_blank">
-					<img src="http://www.cyril-wolfangel.com/integrateur-typo3/wp-content/uploads/2013/08/cyril_wolfangel_exl_group_coul.jpg" class="img-circle desaturate" width="64" height="64" />
-				</f:link.external>
-				<f:link.external class="external" uri="http://cyril-wolfangel.com/" target="_blank">
-					<strong>Cyril Wolfangel</strong>
-				</f:link.external>
+			<div class="col-md-4 presentation">
+				<f:link.page pageUid="{tsConf.page.specialPages.authorPresentationPage}" class="avatar" title="{f:translate(key: 'avatar.hint')}">
+					<f:image src="EXT:skin_typo360_blogs/Resources/Public/Images/Frontend/avatar.jpg" class="img-circle" width="64" height="64" />
+				</f:link.page>
+			<!--</div>-->
+
+			<!--<div class="col-md-5 presentation">-->
+				<!--<h3>-->
+					<!--{tsConf.social.author}-->
+					<!--<f:if condition="{tsConf.social.author_mini_description}">-->
+						<!--<br />-->
+						<!--<small>{tsConf.social.author_mini_description}</small>-->
+					<!--</f:if>-->
+				<!--</h3>-->
+				<div class="social-icons">
+					<f:render partial="SocialIcons" arguments="{_all}" />
+				</div>
 			</div>
 
-			<div class="col-md-4">
-				<f:link.external uri="http://guillaumecaron.fr/" target="_blank">
-					<img src="http://guillaumecaron.fr/fileadmin/user_upload/guillaumecaron.jpg" class="img-circle desaturate" width="64" height="64" />
-				</f:link.external>
-				<f:link.external class="external" uri="http://guillaumecaron.fr/" target="_blank">
-					<strong>Guillaume Caron</strong>
-				</f:link.external>
+			<hr class="hidden-md hidden-lg" />
+
+			<!--<div class="col-md-3"></div>-->
+
+			<div class="col-md-3 col-md-push-2">
+				<f:render partial="Friends" />
 			</div>
 
-			<div class="col-md-4">
-				<f:link.external uri="http://renan-gautier.fr/" target="_blank">
-					<img src="https://pbs.twimg.com/profile_images/460507035667140609/KIdjR6QA.jpeg" class="img-circle desaturate" width="64" height="64" />
-				</f:link.external>
-				<f:link.external class="external" uri="http://renan-gautier.fr/" target="_blank">
-					<strong>Renan Gautier</strong>
-				</f:link.external>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-3 text-center">
-				<f:render partial="SocialIcons" arguments="{_all}" />
-			</div>
+			<hr class="hidden-md hidden-lg" />
 
-			<div class="col-md-3 text-center">
-				<small>
-					<f:translate key="footer.powered_by_bootstrap" />&nbsp;<f:link.external uri="http://getbootstrap.com/" target="_blank" class="external">Bootstrap 3</f:link.external>
-				</small>
-			</div>
-			<div class="col-md-6 text-center">
-				<f:link.external uri="http://validator.w3.org/check?uri={tsConf.request.requestUri}" target="_blank">
-					<img src="http://www.w3.org/Icons/valid-html401.png" alt="{f:translate(key: 'footer.html5_valid')}" />
+			<div class="col-md-2 col-md-push-3">
+				<f:link.external uri="http://validator.w3.org/check?uri={tsConf.request.requestUri}" class="html5-valid" target="_blank" title="{f:translate(key: 'footer.html5_valid')}">
+					<f:image class="desaturate" src="EXT:skin_typo360_blogs/Resources/Public/Images/Frontend/html5-valid-logo.png" />
 				</f:link.external>
 			</div>
 		</div>

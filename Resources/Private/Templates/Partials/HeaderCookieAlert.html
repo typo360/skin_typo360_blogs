@@ -1,0 +1,25 @@
+<div class="cookie-alert"></div>
+<script id="cookie-alert-template" type="text/template">
+	<div class="alert alert-info cookie-monster-container" role="alert">
+		<div class="cookie-monster">
+			<f:translate key="header.cookie_alert" />
+			<br />
+			<a class="btn btn-primary" onclick="disableCookieAlert();"><span class="glyphicon glyphicon-ok"></span>&nbsp;<f:translate key="header.cookie_alert_ok" /></a>
+		</div>
+	</div>
+</script>
+
+<script type="text/javascript">
+	jQuery(document).ready(function () {
+		var cookie = getCookie('cookieAlert');
+		if (cookie === '' || cookie === 'false') {
+			var html = jQuery('#cookie-alert-template').html();
+			jQuery('.cookie-alert').html(html);
+		}
+	});
+
+	function disableCookieAlert() {
+		setCookie('cookieAlert', true, 1000);
+		jQuery('.cookie-alert').hide();
+	}
+</script>

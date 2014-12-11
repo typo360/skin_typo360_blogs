@@ -1,6 +1,15 @@
-<noscript>
-	<div class="alert alert-danger noscript-alert" role="alert">
-		<span class="glyphicon glyphicon-warning-sign"></span>&nbsp;<f:translate key="header.no_javascript" />
-	</div>
-</noscript>
-<header style="background:url({f:cObject(typoscriptObjectPath: 'lib.banner')})"><f:link.page pageUid="{homepage}">&nbsp;</f:link.page></header>
+{namespace pu=EXL\ExlPagesUtilities\ViewHelpers}
+
+<header>
+	<noscript>
+		<div class="alert alert-danger noscript-alert" role="alert">
+			<span class="glyphicon glyphicon-warning-sign"></span>&nbsp;<f:translate key="header.no_javascript" />
+		</div>
+	</noscript>
+
+	<f:render partial="HeaderCookieAlert" />
+
+	<f:alias map="{banner: '{pu:pageMediaWithCustomRole(pageUid: \'{data.uid}\', customRole: \'banner\', slide: 1)}'}">
+		<f:link.page pageUid="{homepage}" class="header-background" style="background-image:url({f:if(condition: '{banner.0}', then: '{f:uri.image(src: \'{banner.0}\', treatIdAsReference: \'1\')}', else: 'fileadmin/user_upload/blog_general/404.png')})">&nbsp;</f:link.page>
+	</f:alias>
+</header>

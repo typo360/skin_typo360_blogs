@@ -93,7 +93,7 @@ class HeaderMenuViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
 		}
 
 		$pages = self::$database->exec_SELECTgetRows(
-			'uid, pid, title',
+			'uid, pid, title, nav_title',
 			'pages',
 			$condition
 		);

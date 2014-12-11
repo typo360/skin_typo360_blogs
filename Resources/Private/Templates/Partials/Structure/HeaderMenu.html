@@ -25,7 +25,7 @@
 										<f:if condition="{pageDepth1.children}">
 											<f:then>
 												<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-													{pageDepth1.title}
+													{f:if(condition: '{pageDepth1.nav_title}', then: '{pageDepth1.nav_title}', else: '{pageDepth1.title}')}
 													<f:if condition="{pageDepth1.children}">
 														<span class="caret"></span>
 													</f:if>
@@ -34,7 +34,7 @@
 													<f:for each="{pageDepth1.children}" as="pageDepth2">
 														<li class="{pageDepth2.active}">
 															<f:link.page pageUid="{pageDepth2.uid}">
-																{pageDepth2.title}
+																{f:if(condition: '{pageDepth2.nav_title}', then: '{pageDepth2.nav_title}', else: '{pageDepth2.title}')}
 															</f:link.page>
 														</li>
 													</f:for>
@@ -42,7 +42,7 @@
 											</f:then>
 											<f:else>
 												<f:link.page pageUid="{pageDepth1.uid}">
-													{pageDepth1.title}
+													{f:if(condition: '{pageDepth1.nav_title}', then: '{pageDepth1.nav_title}', else: '{pageDepth1.title}')}
 												</f:link.page>
 											</f:else>
 										</f:if>
@@ -52,26 +52,26 @@
 						</b:headerMenu>
 
 
-						<ul class="nav navbar-nav navbar-right navbar-header-search">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-								<div class="dropdown-menu">
-									<form class="form-inline" role="form">
+						<!--<ul class="nav navbar-nav navbar-right navbar-header-search">-->
+							<!--<li class="dropdown">-->
+								<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>-->
+								<!--<div class="dropdown-menu">-->
+									<!--<form class="form-inline" role="form">-->
 
-										<div class="form-group">
-											<div class="input-group">
-												<input class="form-control" placeholder="{f:translate(key: 'LLL:EXT:lang/locallang_core.xlf:tree.searchTermInfo')}">
-												<div class="input-group-addon">
-													<button type="submit" class="btn btn-default">
-														<i class="glyphicon glyphicon-search"></i>
-													</button>
-												</div>
-											</div>
-										</div>
-									</form>
-								</div>
-							</li>
-						</ul>
+										<!--<div class="form-group">-->
+											<!--<div class="input-group">-->
+												<!--<input class="form-control" placeholder="{f:translate(key: 'LLL:EXT:lang/locallang_core.xlf:tree.searchTermInfo')}">-->
+												<!--<div class="input-group-addon">-->
+													<!--<button type="submit" class="btn btn-default">-->
+														<!--<i class="glyphicon glyphicon-search"></i>-->
+													<!--</button>-->
+												<!--</div>-->
+											<!--</div>-->
+										<!--</div>-->
+									<!--</form>-->
+								<!--</div>-->
+							<!--</li>-->
+						<!--</ul>-->
 					</div>
 				</div>
 			</nav>

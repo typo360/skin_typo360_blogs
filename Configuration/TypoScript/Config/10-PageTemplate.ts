@@ -1,5 +1,7 @@
 page = PAGE
 page {
+	specialPages.authorPresentationPage = {$page.specialPages.authorPresentationPage}
+
 	typeNum = 0
 	shortcutIcon = {$page.meta.favicon}
 
@@ -12,7 +14,8 @@ page {
 	includeJSFooterlibs {
 #		jquery = {$includePath.javascript}jquery-2.1.1.min.js
 		bootstrap = {$includePath.javascript}bootstrap.min.js
-	}
+		skin =  {$includePath.javascript}skin.js
+}
 
 	javascriptLibs.jQuery = 1
 

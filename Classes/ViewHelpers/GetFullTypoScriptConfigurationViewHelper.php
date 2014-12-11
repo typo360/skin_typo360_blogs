@@ -72,7 +72,7 @@ class GetFullTypoScriptConfigurationViewHelper extends AbstractBackendViewHelper
 						$final = array();
 						$this->setDeepArray($final, $value, $tmpConfiguration);
 
-						$finalConfiguration = array_merge($finalConfiguration, $final);
+						$finalConfiguration = array_merge_recursive($finalConfiguration, $final);
 					}
 				}
 			}

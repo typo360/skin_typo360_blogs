@@ -15,3 +15,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\\CMS\\Fluid\\View\\Standalo
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\\CMS\\Frontend\\ContentObject\\FluidTemplateContentObject'] = array(
 	'className' => 'EXL\\SkinTypo360Blogs\\Xclass\\FluidTemplateContentObject',
 );
+
+// Adding custom roles to medias for pages.
+\TYPO3\ExlPagesUtilities\Utility\ResourceMedia::addCustomRole('banner', 'LLL:EXT:skin_typo360_blogs/Resources/Private/Language/locallang.xlf:pages.medias.custom_roles.banner');
+\TYPO3\ExlPagesUtilities\Utility\ResourceMedia::addCustomRole('article_thumbnail', 'LLL:EXT:skin_typo360_blogs/Resources/Private/Language/locallang.xlf:pages.medias.custom_roles.article_thumbnail');

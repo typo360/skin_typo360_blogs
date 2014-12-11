@@ -1,20 +1,30 @@
 <f:layout name="{layout}" />
 
 <f:section name="BodyColumn1">
-	<h1>{data.title}</h1>
+	<h1>
+		{data.title}<!--<br />-->
+		<!--<small>aze</small>-->
+	</h1>
+
+	<hr />
 
 	<f:cObject typoscriptObjectPath="lib.content0" />
 
-	<div id="disqus_thread"></div>
-	<script type="text/javascript">
-		var disqus_shortname = 'romainlecodexcom';
+	<f:if condition="{tsConf.social.disqus}">
+		<hr />
 
-		(function() {
-			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		})();
-	</script>
-	<noscript>Merci d'activer le JavaScript pour voir les <a href="http://disqus.com/?ref_noscript">commentaires générés par Disqus.</a></noscript>
-	<a href="http://disqus.com" class="dsq-brlink">commentaires générés par <span class="logo-disqus">Disqus</span></a>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = '{tsConf.social.disqus}'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Merci d'activer le JavaScript pour voir les <a href="http://disqus.com/?ref_noscript">commentaires générés par Disqus.</a></noscript>
+	</f:if>
 </f:section>
