@@ -54,33 +54,20 @@ social {
 	facebook = https://www.facebook.com/TYPO360
 	# cat=Blog: basic/170/110; type=string; label=Twitter page
 	twitter = TYPO360
-<<<<<<< HEAD
 	# cat=Blog: basic/170/110; type=string; label=Google Plus page
 	googleplus = https://plus.google.com/u/0/+TYPO360
 	# cat=Blog: basic/170/110; type=string; label=Twitter page
-=======
-	# cat=Blog: basic/170/120; type=string; label=Twitter page
->>>>>>> 0da37c67f2a50a8196bc019e9a0c501f74d313bc
 	twitterWidgetId =
-	# cat=Blog: basic/170/130; type=string; label=Linkedin page
+	# cat=Blog: basic/170/120; type=string; label=Linkedin page
 	linkedin = http://fr.linkedin.com/pub/TYPO360/86/70/728
-	# cat=Blog: basic/170/140; type=string; label=Identifiant Skype
+	# cat=Blog: basic/170/130; type=string; label=Viadeo page
 	skype = TYPO360
-	# cat=Blog: basic/170/150; type=string; label=Google Plus page
-	googleplus = https://plus.google.com/+TYPO360
-	# cat=Blog: basic/170/160; type=string; label=Viadeo page
-	viadeo = http://www.viadeo.com/fr/profile/TYPO360
-	# cat=Blog: basic/170/170; type=string; label=Steam page
+	# cat=Blog: basic/170/150; type=string; label=Steam page
 	steam = TYPO360
-	# cat=Blog: basic/170/180; type=string; label=Email
+	# cat=Blog: basic/170/160; type=string; label=Email
 	email = typo360@exl-group.com
-<<<<<<< HEAD
 	# cat=Blog: basic/170/160; type=string; label=Disqus account
 	disqus = blogromaincanon
-=======
-	# cat=Blog: advanced/170/190; type=string; label=Disqus Shortname
-	disqusShortname = typo360
->>>>>>> 0da37c67f2a50a8196bc019e9a0c501f74d313bc
 }
 
 ##############

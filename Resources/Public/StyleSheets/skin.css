@@ -65,16 +65,10 @@ a.external:hover::before, a.external-link-new-window:hover::before {
 header a.header-background {
 	width: 100%;
 	height: 340px;
-<<<<<<< HEAD
 	display: block;
 	background-position: center 0px;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-=======
-	background: no-repeat fixed;
-	background-position: center 0px;
-	background-size: 100% auto;
->>>>>>> 0da37c67f2a50a8196bc019e9a0c501f74d313bc
 }
 
 @media (max-width: 768px) {
